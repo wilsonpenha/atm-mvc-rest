@@ -1,6 +1,6 @@
 ING ATM Locator - Spring MVC/RESTfull API for searching ING ATMs
 
-This ATM Locator is an simple web UI integrated with RESTfull service and retrieve all locations of Dutch ATM belonging to ING bank:
+This ATM Locator is a simple web UI integrated with RESTfull service and retrieve all locations of Dutch ATM belonging to ING bank:
 
 RESTfull web service API for accessing ATM locations
 
@@ -34,8 +34,8 @@ Test cases
 
 Use case	RESTfull API	Expected result	Description
 
-1. Get all ATM location JSON format	/list	[{"address": {"street": "Heerenweg","housenumber": "199","postalcode": "1851 KP","city": "HEILOO","geoLocation": {"lat": "52.60022","lng": "4.703054"}},"distance": 0,"type": "ING"}]	The RESTfull API dispatches a request to https://www.ing.nl/api/locator/atms/ and response the result in the same format as it was retrieve
-2. Search ATM by city	/search/city/Amsterdam	[{type: "ING",address: {street: "Beethovenstraat",housenumber: "8",postalcode: "1077 JG",city: "Amsterdam",geoLocation: {lat: "52.350159",lng: "4.878119"}}}},	The RESTfull API dispatches a request to https://www.ing.nl/api/locator/atms/ and the response will be filtered by city and send to requester in the same JSON format.
+1. Get all ATM location JSON format	http://localhost:8080/atm-mvc-rest/list	response: [{"address": {"street": "Heerenweg","housenumber": "199","postalcode": "1851 KP","city": "HEILOO","geoLocation": {"lat": "52.60022","lng": "4.703054"}},"distance": 0,"type": "ING"}]	The RESTfull API dispatches a request to https://www.ing.nl/api/locator/atms/ and response the result in the same format as it was retrieve
+2. Search ATM by city	http://localhost:8080/atm-mvc-rest/search/city/Amsterdam	response: [{type: "ING",address: {street: "Beethovenstraat",housenumber: "8",postalcode: "1077 JG",city: "Amsterdam",geoLocation: {lat: "52.350159",lng: "4.878119"}}}},	The RESTfull API dispatches a request to https://www.ing.nl/api/locator/atms/ and the response will be filtered by city and send to requester in the same JSON format.
 
 Secutity
 
@@ -55,4 +55,4 @@ Usage
 
 After deploy the application successfully at Tomcat, try http://localhost:8080/atm-mvc-rest/ and get the login page enter your user and password: (admin, admin)
 
-Then your will be able to use the Simple WEB UI and or the RESTfull urls to retrieve the data as you wish.
+Then your will be able to use the Simple WEB UI and/or the RESTfull urls to retrieve the data as you wish.
