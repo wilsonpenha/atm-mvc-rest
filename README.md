@@ -16,6 +16,10 @@ $ mvn install
 
 The command should build war atm-mvc-rest.war in target folder
 
+With Eclipse NEON or higher, you can just import the atm-mvc-rest.war into your project, or you can install git plugin and download into eclipse,
+
+If you the app don't start due missing .jar, you will need to run mvn again to load the missing jars.
+
 Deployment
 
 In Tomcat env. it is enough to copy the atm-mvc-rest.war to your Tomcat/webapps folder. When startup Tomcat, the war file will be automatically deployed with context root atm-mvc-rest
@@ -35,6 +39,7 @@ Test cases
 Use case	RESTfull API	Expected result	Description
 
 1. Get all ATM location JSON format	http://localhost:8080/atm-mvc-rest/list	response: [{"address": {"street": "Heerenweg","housenumber": "199","postalcode": "1851 KP","city": "HEILOO","geoLocation": {"lat": "52.60022","lng": "4.703054"}},"distance": 0,"type": "ING"}]	The RESTfull API dispatches a request to https://www.ing.nl/api/locator/atms/ and response the result in the same format as it was retrieve
+
 2. Search ATM by city	http://localhost:8080/atm-mvc-rest/search/city/Amsterdam	response: [{type: "ING",address: {street: "Beethovenstraat",housenumber: "8",postalcode: "1077 JG",city: "Amsterdam",geoLocation: {lat: "52.350159",lng: "4.878119"}}}},	The RESTfull API dispatches a request to https://www.ing.nl/api/locator/atms/ and the response will be filtered by city and send to requester in the same JSON format.
 
 Secutity
