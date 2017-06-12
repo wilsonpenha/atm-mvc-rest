@@ -55,4 +55,4 @@ Usage
 
 After deploy the application successfully at Tomcat, try http://localhost:8080/atm-mvc-rest/ and get the login page enter your user and password: (admin, admin)
 
-Then your will be able to use the Simple WEB UI and or the RESTfull urls to rerieve the data as you wish.
+Then your will be able to use the Simple WEB UI and or the RESTfull urls to retrieve the data as you wish.
