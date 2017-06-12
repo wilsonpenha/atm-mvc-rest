@@ -14,11 +14,11 @@ People normally using linux would do as follow
 
 $ mvn install 
 
-The command should build war atm-spring-rest.war in target folder
+The command should build war atm-mvc-rest.war in target folder
 
 Deployment
 
-In Tomcat env. it is enough to copy the atm-spring-rest.war to your Tomcat/webapps folder. When startup Tomcat, the war file will be automatically deployed with context root atm-spring-rest
+In Tomcat env. it is enough to copy the atm-mvc-rest.war to your Tomcat/webapps folder. When startup Tomcat, the war file will be automatically deployed with context root atm-mvc-rest
 
 Technology used in this project
 
@@ -42,18 +42,17 @@ Secutity
 There are two groups of users: ADMIN and USER
 
 ADMIN:
-
 user: admin
 password: admin
-USER:
 
+USER:
 user: wilson
 password: wilson
 
-Accounts both groups has rights to perform any requests, permission can be change at SecurityConfiguration.java class and compile again, this is not how it was meant to work, but is fine for this demo.
+Both groups has rights to perform any requests, permission can be change at SecurityConfiguration.java class and compile again, this is not how it was meant to work, but is fine for this demo.
 
 Usage
 
-After deploy the application successfully, try http://localhost:8080/atm-spring-rest/ and get the login page enter your user and password: (admin, admin)
+After deploy the application successfully at Tomcat, try http://localhost:8080/atm-mvc-rest/ and get the login page enter your user and password: (admin, admin)
 
-then your will be able to use the Simple WEB UI and or the RESTfull urls to rerieve the data as you wish.
+Then your will be able to use the Simple WEB UI and or the RESTfull urls to rerieve the data as you wish.
